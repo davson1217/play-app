@@ -9,9 +9,9 @@ Route::controller(SampleController::class)->group(function () {
 });
 
 Route::controller(StoreController::class)->group(function () {
-//    Route::get('/', 'index');// a landing page that offers login/registration routing
-    Route::match(['get', 'post'], '/register', ['registrationForm', 'register']);// shared web design specifically for registration
-    Route::match(['get', 'post'], '/login', ['loginForm', 'login']);// shared web design specifically for login
+    // Route::get('/', 'index'); // a landing page that offers login/registration routing
+    Route::match(['get', 'post'], '/register', ['registrationForm', 'register']); // shared web design specifically for registration
+    Route::match(['get', 'post'], '/login', ['loginForm', 'login']); // shared web design specifically for login
 
     //Maybe create a dashboard controller.
     //These routes should be protected/authenticated before access.
